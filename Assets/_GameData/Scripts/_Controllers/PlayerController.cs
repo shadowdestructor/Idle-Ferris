@@ -1,10 +1,22 @@
 using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
-    /*public void Click()
+    public static PlayerController Instance {get; private set;}
+    private void Awake()
     {
-        Time.timeScale = 5f;
-        Invoke(nameof(NormalTime),.5f);   
+        Instance = this;
+        Application.targetFrameRate = 60;
     }
-    private void NormalTime()=> Time.timeScale = 1f;*/
+    private void LateUpdate()
+    {
+        var mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition).y;
+        if (Input.GetKeyDown(KeyCode.Mouse0) && 
+        (mousePos < .85f && mousePos > .35f))
+        {
+            //CoinManager.Instance.Income(1);
+            Time.timeScale = 5f;
+            Invoke(nameof(NormalTime),1f);   
+        }
+    }
+    private void NormalTime()=> Time.timeScale = 1f;
 }

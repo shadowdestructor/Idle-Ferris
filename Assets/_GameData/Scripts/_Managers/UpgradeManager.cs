@@ -67,10 +67,11 @@ public class UpgradeManager : MonoBehaviour
         switch (upgrade.elementName)
         {
             case "Speed":
-                upgrade.value += upgrade.defaultvalue * .1f;
+                upgrade.value -= upgrade.defaultvalue - .2f;//.1f
+                //CabinetManager.Instance.speed = upgrade.value;
                 break;
             case "Pump":
-                PumperManager.Instance.Enabling((int)upgrade.value);
+                WheelManager.Instance.Enabling((int)upgrade.value);
                 upgrade.value++;
                 break;
             case "Income":

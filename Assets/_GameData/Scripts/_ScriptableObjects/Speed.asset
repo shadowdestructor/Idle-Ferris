@@ -20,5 +20,5 @@ MonoBehaviour:
   borderLevel: 10
   Cost: 250
   defaultCost: 250
-  value: 25
-  defaultvalue: 25
+  value: 1
+  defaultvalue: 1
