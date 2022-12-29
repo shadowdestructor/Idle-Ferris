@@ -23,4 +23,8 @@ public class WheelManager : MonoBehaviour
     {
         //particles
     }
+    /*private void OnAnimatorMove() 
+    {
+        Debug.Log("anime");
+    }*/
 }
