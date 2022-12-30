@@ -23,8 +23,11 @@ public class WheelManager : MonoBehaviour
     {
         //particles
     }
-    /*private void OnAnimatorMove() 
+    public void Look()
     {
-        Debug.Log("anime");
-    }*/
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).rotation = Quaternion.Euler(0,0,-transform.parent.rotation.z);
+        }
+    }
 }

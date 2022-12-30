@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 5f;
             Invoke(nameof(NormalTime),1f);   
         }
-        CabinetManager.Instance.Look();
+        WheelManager.Instance.Look();
     }
     private void OnAnimatorMove() 
     {
