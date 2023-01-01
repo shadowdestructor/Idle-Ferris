@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa11ec82e9746928e211e7f096812ca, type: 3}
+  m_Name: TinySauceSettings 1
+  m_EditorClassIdentifier: 
+  gameAnalyticsIosGameKey: 
+  gameAnalyticsIosSecretKey: 
+  gameAnalyticsAndroidGameKey: 99a4e2997c494b04091dc5e69468c13c
+  gameAnalyticsAndroidSecretKey: 02212f35716b482a30d1aaf002f595a6c2beb43f
+  facebookAppId: 876926313451192
+  facebookClientToken: cac31cb8ca167b7b017533d80fddc522
+  adjustIOSToken: 
+  adjustAndroidToken: vi8gjkewh9ts
+  EditorIdfa: 
+  UseRemoteConfig: 0
+  UseVoodooAnalytics: 1
+  companyName: Burst Games
+  privacyPolicyURL: https://burstgames27.blogspot.com
+  developerContactEmail: burstgames27@gmail.com
