@@ -6,13 +6,18 @@ public class TriggerManager : MonoBehaviour
     [SerializeField] private UpgradeAble income;
     private void OnTriggerEnter(Collider other) 
     {
-        WheelManager.Instance._anim.speed = 0;
-        TextAnim();
-        Invoke(nameof(Goto),2);
+        if (other.gameObject.TryGetComponent(out CabinetManager cabinetManager))
+        {
+            WheelManager.Instance._anim.speed = 0;
+            TextAnim();
+            Invoke(nameof(Goto),2);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
         CoinManager.Instance.Click();
+        CharacterController.Instance.meshRenderer.gameObject.SetActive(true);
+        CharacterController.Instance.Trigger(5,false);
     }
     private void Goto()=>WheelManager.Instance._anim.speed = 1;
     private void TextAnim()

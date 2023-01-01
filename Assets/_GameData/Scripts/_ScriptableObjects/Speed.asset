@@ -18,7 +18,7 @@ MonoBehaviour:
   elementName: Speed
   Level: 1
   borderLevel: 10
-  Cost: 250
-  defaultCost: 250
+  Cost: 25
+  defaultCost: 25
   value: 1
   defaultvalue: 1

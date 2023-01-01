@@ -18,7 +18,7 @@ MonoBehaviour:
   elementName: Income
   Level: 1
   borderLevel: 15
-  Cost: 100
-  defaultCost: 100
+  Cost: 10
+  defaultCost: 10
   value: 50
   defaultvalue: 50

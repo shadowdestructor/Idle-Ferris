@@ -17,8 +17,8 @@ MonoBehaviour:
   backColor: {x: 0.148665, y: 0.40014, z: 0.9056604}
   elementName: Pump
   Level: 1
-  borderLevel: 10
-  Cost: 500
-  defaultCost: 500
+  borderLevel: 16
+  Cost: 50
+  defaultCost: 50
   value: 1
   defaultvalue: 1
