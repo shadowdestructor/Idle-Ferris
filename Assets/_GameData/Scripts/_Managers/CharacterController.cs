@@ -20,7 +20,7 @@ public class CharacterController : MonoBehaviour
     private void OnTriggerEnter(Collider other) 
     {
         Trigger(0,true);
-        if (other.gameObject.TryGetComponent(out CabinetManager cabinetManager))
+        if (other.gameObject.TryGetComponent(out MeshCollider meshCollider))
         {
             meshRenderer.gameObject.SetActive(false);
             Trigger(1,false);

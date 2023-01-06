@@ -13,14 +13,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && 
         (mousePos < .85f && mousePos > .35f))
         {
-            //CoinManager.Instance.Income(1);
             Time.timeScale = 5f;
-            Invoke(nameof(NormalTime),1f);   
+            Invoke(nameof(NormalTime),1.5f);   
         }
         WheelManager.Instance.Look();
-    }
-    private void OnAnimatorMove() 
-    {
     }
     private void NormalTime()=> Time.timeScale = 1f;
 }
