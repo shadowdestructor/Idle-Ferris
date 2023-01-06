@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System;
-
 public class UpgradeManager : MonoBehaviour
 {
     public static UpgradeManager Instance {get;private set;}
@@ -10,13 +8,14 @@ public class UpgradeManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI cost;
     [SerializeField] public UpgradeAble upgrade;
     private Button buton;
-    [SerializeField] private Image image,backImage;
-    [SerializeField] private Shadow shadow;
+    [SerializeField] private Image image;
+    private Shadow shadow;
     [SerializeField] private string element;
     private void Awake()
     {
         Instance = this;
         buton = GetComponent<Button>();
+        shadow = GetComponent<Shadow>();
         cost.text = upgrade.Cost.ToString();
         if(upgrade.elementName == "Income"){ income = (int)upgrade.value;}
         LevelControl();
@@ -43,18 +42,15 @@ public class UpgradeManager : MonoBehaviour
         }*/
         if (PlayerPrefs.GetInt("topmoney") >= upgrade.Cost)
         {
-            image.color = new Color(upgrade.color.x,upgrade.color.y,upgrade.color.z,1);//upgrade.color;
-            backImage.color = new Color(upgrade.color.x,upgrade.color.y,upgrade.color.z,1);//upgrade.backColor;
-            shadow.effectColor = new Color(upgrade.shadowColor.x,upgrade.shadowColor.y,upgrade.shadowColor.z,1);//upgrade.shadowColor;
-            //new Color(shadowcolor.x,shadowcolor.y,shadowcolor.z,1);//upgrade.shadowColor;
+            //image.color = new Color(.4392157f,.4862745f,.6745098f,1);
+            //shadow.effectColor = new Color(.5274297f,.5785475f,0.7830189f,1);
         }
-        if (PlayerPrefs.GetInt("topmoney") < upgrade.Cost && element == upgrade.elementName){ MAXColor(); }
+        //if (PlayerPrefs.GetInt("topmoney") < upgrade.Cost && element == upgrade.elementName){ MAXColor(); }
     }
     private void MAXColor()
     {
-        image.color = new Color(.37f,.37f,.37f,1);
-        backImage.color = new Color(.5f,.5f,.5f,1);
-        shadow.effectColor = new Color(.3f,.3f,.3f,1);
+        //image.color = new Color(.37f,.37f,.37f,1);
+        //shadow.effectColor = new Color(.3f,.3f,.3f,1);
     }
     private void Upgrades()
     {

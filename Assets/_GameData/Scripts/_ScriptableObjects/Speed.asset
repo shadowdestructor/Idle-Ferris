@@ -12,12 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31be2860eb1aee419c5f9cc9e861f1d, type: 3}
   m_Name: Speed
   m_EditorClassIdentifier: 
-  color: {x: 0.8313726, y: 0.3098039, z: 0.3098039}
-  shadowColor: {x: 0.6901961, y: 0, z: 0}
-  backColor: {x: 0.8392158, y: 0.2313726, z: 0.2313726}
   elementName: Speed
-  Level: 1
-  borderLevel: 10
   Cost: 25
   defaultCost: 25
   value: 1

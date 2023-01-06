@@ -1,10 +1,12 @@
 using UnityEngine;
-
+using System.Collections;
+using System.Collections.Generic;
 public class WheelManager : MonoBehaviour
 {
     public static WheelManager Instance {get; private set;}
     [HideInInspector] public Animator _anim;
     [SerializeField] private UpgradeAble pump;
+    private List<int> list;
     private void Awake() 
     {
         Instance = this;
@@ -18,11 +20,6 @@ public class WheelManager : MonoBehaviour
     {
         transform.GetChild(i).gameObject.SetActive(true);
         i++;
-    
-        if (transform.childCount % 3 == 0 ) //mergelesin
-        {
-            
-        }
     }
     private void OnEnable() 
     {
@@ -33,6 +30,13 @@ public class WheelManager : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).rotation = Quaternion.Euler(0,0,-transform.parent.rotation.z);
+        }
+    }
+    public void Merge()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            list.Add(transform.GetChild(i).GetComponent<FerrisManager>().identity);
         }
     }
 }

@@ -10,15 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f31be2860eb1aee419c5f9cc9e861f1d, type: 3}
-  m_Name: Pump
+  m_Name: Ferris
   m_EditorClassIdentifier: 
-  color: {x: 0.3098039, y: 0.5340742, z: 0.8340742}
-  shadowColor: {x: 0, y: 0.2574893, z: 0.6901961}
-  backColor: {x: 0.148665, y: 0.40014, z: 0.9056604}
-  elementName: Pump
-  Level: 1
-  borderLevel: 16
-  Cost: 50
-  defaultCost: 50
+  elementName: Ferris
+  Cost: 25
+  defaultCost: 25
   value: 1
   defaultvalue: 1

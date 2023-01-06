@@ -25,5 +25,4 @@ public class CoinManager : MonoBehaviour
         m_CoinText.text = PlayerPrefs.GetInt("topmoney").ToString();
         coinEvent.Invoke();
     }
-    public void Click()=>Income((int)income.value);
 }
