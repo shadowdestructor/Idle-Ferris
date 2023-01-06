@@ -6,24 +6,19 @@ public class TriggerManager : MonoBehaviour
     [SerializeField] private UpgradeAble income;
     private void OnTriggerEnter(Collider other) 
     {
-        if (other.gameObject.TryGetComponent(out MeshCollider meshCollider))
-        {
-            TextAnim();
-        }
+        if (other.gameObject.TryGetComponent(out MeshCollider meshCollider)){TextAnim();}
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.TryGetComponent(out MeshCollider meshCollider))
         {  
             CoinManager.Instance.Click();
-            CharacterController.Instance.meshRenderer.gameObject.SetActive  (true);
-            CharacterController.Instance.Trigger(5,false);
         }
     }
     private void TextAnim()
     {
         text.gameObject.SetActive(true);
-        text.gameObject.transform.DOMoveY(6.5f,.75f).OnComplete(()=>
+        text.gameObject.transform.DOMoveY(6.5f,1.25f).OnComplete(()=>
         {
             text.text = "+$"+((int)income.value).ToString();
             text.gameObject.SetActive(false);

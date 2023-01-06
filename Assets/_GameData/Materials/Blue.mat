@@ -8,15 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Blue
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: 4800000, guid: d1c477a84f1334efd8e8a841e146ffbb, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -110,11 +109,11 @@ Material:
     - _ZWrite: 1
     - __dummy__: 0
     m_Colors:
-    - _BaseColor: {r: 0.50980395, g: 0.1882353, b: 0.21960784, a: 1}
+    - _BaseColor: {r: 0.7169812, g: 0.36796013, b: 0.40201095, a: 1}
     - _Color: {r: 0.50980395, g: 0.1882353, b: 0.21960784, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SColor: {r: 1, g: 1, b: 1, a: 1}
+    - _HColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &6557083190987874082

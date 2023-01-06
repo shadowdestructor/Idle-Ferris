@@ -18,6 +18,11 @@ public class WheelManager : MonoBehaviour
     {
         transform.GetChild(i).gameObject.SetActive(true);
         i++;
+    
+        if (transform.childCount % 3 == 0 ) //mergelesin
+        {
+            
+        }
     }
     private void OnEnable() 
     {

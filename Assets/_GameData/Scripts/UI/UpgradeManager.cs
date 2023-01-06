@@ -7,7 +7,6 @@ public class UpgradeManager : MonoBehaviour
 {
     public static UpgradeManager Instance {get;private set;}
     [HideInInspector] public int income;
-    [SerializeField] private TextMeshProUGUI level;
     [SerializeField] private TextMeshProUGUI cost;
     [SerializeField] public UpgradeAble upgrade;
     private Button buton;
@@ -19,7 +18,6 @@ public class UpgradeManager : MonoBehaviour
         Instance = this;
         buton = GetComponent<Button>();
         cost.text = upgrade.Cost.ToString();
-        level.text = ("Level " + upgrade.Level).ToString();
         if(upgrade.elementName == "Income"){ income = (int)upgrade.value;}
         LevelControl();
     }
@@ -33,21 +31,18 @@ public class UpgradeManager : MonoBehaviour
             Upgrades();
             upgrade.Cost += (upgrade.defaultCost / 2);
             cost.text = upgrade.Cost.ToString();
-            level.text = ("Level "+(++upgrade.Level)).ToString();
         }
         LevelControl();
     }
     public void LevelControl()
     {
-        if (upgrade.Level == upgrade.borderLevel)
+        /*if (upgrade.Level == upgrade.borderLevel)
         {
             cost.text = "MAX".ToString();
-            level.text = "Level MAX".ToString();
             buton.interactable = false;
-        }
+        }*/
         if (PlayerPrefs.GetInt("topmoney") >= upgrade.Cost)
         {
-            level.color = new Color(upgrade.color.x,upgrade.color.y,upgrade.color.z);
             image.color = new Color(upgrade.color.x,upgrade.color.y,upgrade.color.z,1);//upgrade.color;
             backImage.color = new Color(upgrade.color.x,upgrade.color.y,upgrade.color.z,1);//upgrade.backColor;
             shadow.effectColor = new Color(upgrade.shadowColor.x,upgrade.shadowColor.y,upgrade.shadowColor.z,1);//upgrade.shadowColor;
@@ -57,7 +52,6 @@ public class UpgradeManager : MonoBehaviour
     }
     private void MAXColor()
     {
-        level.color = new Color(.5f,.5f,.5f,1);
         image.color = new Color(.37f,.37f,.37f,1);
         backImage.color = new Color(.5f,.5f,.5f,1);
         shadow.effectColor = new Color(.3f,.3f,.3f,1);
