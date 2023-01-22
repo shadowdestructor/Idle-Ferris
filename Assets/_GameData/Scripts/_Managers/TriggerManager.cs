@@ -4,9 +4,7 @@ using TMPro;
 
 public class TriggerManager : MonoBehaviour
 {
-    //[SerializeField] private TextMesh text;
     [SerializeField] private TextMeshPro text;
-
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.TryGetComponent(out FerrisManager ferrisManager))

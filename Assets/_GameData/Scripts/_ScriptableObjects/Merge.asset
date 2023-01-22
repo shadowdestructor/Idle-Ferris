@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Merge
   m_EditorClassIdentifier: 
   elementName: Merge
-  Cost: 25
-  defaultCost: 25
+  Cost: 1
+  defaultCost: 1
   value: 1
   defaultvalue: 1

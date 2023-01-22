@@ -1,12 +1,13 @@
 using UnityEngine;
-using System.Collections;
+using DG.Tweening;
 using System.Collections.Generic;
+using System.Linq;
 public class WheelManager : MonoBehaviour
 {
     public static WheelManager Instance {get; private set;}
     [HideInInspector] public Animator _anim;
     [SerializeField] private UpgradeAble pump;
-    private List<int> list;
+    private List<int> list,list2;
     private void Awake() 
     {
         Instance = this;
@@ -36,7 +37,30 @@ public class WheelManager : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            list.Add(transform.GetChild(i).GetComponent<FerrisManager>().identity);
+            var tr = transform.GetChild(i);
+            list.Add(tr.GetComponent<FerrisManager>().identity);
+            list2.Add(tr.GetSiblingIndex());
+            transform.GetChild(i).transform.DOMove(Vector3.zero,1.5f);
         }
+        var arbs = list.GroupBy(v => v);
+        foreach (var a in arbs)
+        {
+            if (a.Count() % 4 == 0)
+            {
+                //mergeyi yap
+                Merging();
+            }
+            //a.Key()
+        }
+
+    }
+    private void Merging()
+    {
+        var arbs = list.GroupBy(v => v);
+        foreach(var i in arbs)
+        {
+            
+        }
+        list.Clear();
     }
 }

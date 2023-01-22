@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ferris
   m_EditorClassIdentifier: 
   elementName: Ferris
-  Cost: 25
-  defaultCost: 25
+  Cost: 20
+  defaultCost: 20
   value: 1
   defaultvalue: 1

@@ -10,5 +10,8 @@ public class FerrisManager : MonoBehaviour
         Instance = this;
         meshFilter = GetComponent<MeshFilter>();
     }
-    
+    public void Ferris()
+    {
+        
+    }
 }

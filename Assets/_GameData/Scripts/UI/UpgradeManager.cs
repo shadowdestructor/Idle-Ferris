@@ -28,7 +28,7 @@ public class UpgradeManager : MonoBehaviour
             PlayerPrefs.SetInt("topmoney", CoinManager.Instance.yourMoney);
             CoinManager.Instance.m_CoinText.text = CoinManager.Instance.yourMoney.ToString();
             Upgrades();
-            upgrade.Cost += (upgrade.defaultCost / 2);
+            upgrade.Cost += (upgrade.defaultCost);
             cost.text = upgrade.Cost.ToString();
         }
         LevelControl();
@@ -58,14 +58,17 @@ public class UpgradeManager : MonoBehaviour
         {
             case "Speed":
                 upgrade.value -= upgrade.defaultvalue - .2f;//.1f
-                //CabinetManager.Instance.speed = upgrade.value;
+                WheelManager.Instance._anim.speed = upgrade.value;
                 break;
-            case "Pump":
+            case "Ferris":
                 WheelManager.Instance.Enabling((int)upgrade.value);
-                upgrade.value++;
+                upgrade.value++; //if 16 max
                 break;
             case "Income":
                 upgrade.value += upgrade.defaultvalue * .1f;
+                break;
+            case "Merge":
+            
                 break;
             default:
                 break;
